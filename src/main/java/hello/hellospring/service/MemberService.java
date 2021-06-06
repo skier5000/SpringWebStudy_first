@@ -12,6 +12,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    // DI 예제
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
