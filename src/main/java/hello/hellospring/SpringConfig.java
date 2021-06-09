@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * 자바 코드로 직접 스프링빈을 등록하는 방법
- *
  */
 @Configuration
 public class SpringConfig {
