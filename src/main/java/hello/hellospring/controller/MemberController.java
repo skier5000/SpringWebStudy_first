@@ -16,10 +16,11 @@ public class MemberController {
     // Dependency Injection (DI)
     private final MemberService memberService;
 
+    // 생성자를 통해서 DI 주입 (가장 괜찮)
     @Autowired
     public MemberController(MemberService memberService){
         this.memberService = memberService;
     }
-    
+
 
 }
