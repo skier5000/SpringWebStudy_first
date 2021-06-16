@@ -33,9 +33,10 @@ public class MemberController {
     @PostMapping("/members/new")
     public String Create(MemberForm memberForm){
         Member member = new Member();
-        member.setName(member.getName());
+        member.setName(memberForm.getName());
         memberService.join(member);
 
+        // redirect 사용시
         return "redirect:/";
     }
 
