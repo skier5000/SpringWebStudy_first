@@ -34,6 +34,9 @@ public class MemberController {
     public String Create(MemberForm memberForm){
         Member member = new Member();
         member.setName(memberForm.getName());
+
+        System.out.println("member = " + member.getName());
+
         memberService.join(member);
 
         // redirect 사용시
