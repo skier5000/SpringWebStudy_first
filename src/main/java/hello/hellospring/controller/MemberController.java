@@ -26,6 +26,9 @@ public class MemberController {
     @Autowired
     public MemberController(MemberService memberService){
         this.memberService = memberService;
+        // AOP 적용 후, memberService 는 프록시로서 실제 MemberService 호출 전 인터셉트함
+        // 그리고 AOP 클래스에서 joinPoint.proceed() 하면 실제 MemberService 를 호출
+        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
