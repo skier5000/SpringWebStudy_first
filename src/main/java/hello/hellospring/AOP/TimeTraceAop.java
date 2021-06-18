@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Aspect // AOP임을 명시
 public class TimeTraceAop {
 
+    // @Around 는 AOP 를 어디에다가 적용할건지 Targeting
     @Around("execution(* hello.hellospring..*(..))")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.currentTimeMillis();

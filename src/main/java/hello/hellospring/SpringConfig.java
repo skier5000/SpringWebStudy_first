@@ -55,11 +55,11 @@ public class SpringConfig {
 //        return new JpaMemberRepository(entityManager);
 //    }
 
-    // AOP - TimeTraceAop 를 Spring Bean 으로 등록
-    @Bean
-    public TimeTraceAop timeTraceAop() {
-        return new TimeTraceAop();
-    }
+    // AOP - TimeTraceAop 를 Spring Bean 으로 등록 (@Component 스캔하기로 했으니까 주석처리)
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 
 
 }
