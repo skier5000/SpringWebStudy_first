@@ -36,11 +36,21 @@ public class MemberService {
      * @return member.getId()
      */
     public Long join(Member member){
-        // 같은 이름이 있는 중복 회원 불가
-        validateDuplicateMember(member);
 
-        memberRepository.save(member);
-        return member.getId();
+        long start = System.currentTimeMillis();
+
+        try{
+            // 같은 이름이 있는 중복 회원 불가
+            validateDuplicateMember(member);
+
+            memberRepository.save(member);
+            return member.getId();
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.println("join = " + timeMs + "ms");
+        }
+
     }
 
     /**
