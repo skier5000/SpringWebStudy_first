@@ -4,12 +4,16 @@ import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 //Component Scan 으로 자동 주입
 //@Service
+
+// JPA 를 사용하면 Service 계층에 Transactional 을 해주어야함
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
